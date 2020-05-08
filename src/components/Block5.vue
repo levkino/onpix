@@ -3,19 +3,20 @@
     <b-container>
       <h1>Обо мне</h1>
       <div class="about wow fadeInUp">
+        <b-img-lazy class="foto" src="@/assets/slide5_1.jpg" rounded="circle"/>
         <p>
-          Меня зовут Лев. Закончил кафедру инженерной кибернетики НИТУ МИСиС.
+          Меня зовут Лев. Я закончил кафедру инженерной кибернетики в НИТУ МИСиС.
           Занимюсь разработкой десктопных приложений и веб-сайтов более 10 лет.
-          Участвовал в следующих проектах:
         </p>
-        <div class="images">
-          <b-img-lazy src="@/assets/slide5_1.png"/>
-          <b-img-lazy src="@/assets/slide5_2.png"/>
-          <b-img-lazy src="@/assets/slide5_3.png"/>
-        </div>
-        <p class="mt-4">
-          Готов взяться за Ваш проект, сделать красивый и качественный сайт с хорошей конверсией.
+        <h3 class="mt-5 mb-4">Примеры моих работ</h3>
+        <b-carousel controls indicators :interval="4000" img-width="1024" img-height="529">
+          <b-carousel-slide caption="www.dance-soft.ru" img-src="@/assets/slide5_2.jpg"/>
+          <b-carousel-slide caption="www.fitness-soft.ru" img-src="@/assets/slide5_3.jpg"/>
+        </b-carousel>
+        <p class="mt-5">
+          Оставьте заявку и я свяжусь с Вами в ближайшее время.
         </p>
+        <b-button variant="primary" @click="$parent.showApplic()">Оставить заявку</b-button>
       </div>
     </b-container>
   </div>
@@ -33,14 +34,9 @@
     margin: 0 auto;
   }
 
-  .images {
-    background: white;
-    border: 1px lightgray solid;
-    border-radius: 10px;
-    padding: 30px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  .foto {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
   }
 </style>

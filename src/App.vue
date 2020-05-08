@@ -7,10 +7,12 @@
     <Block5 />
     <Block6 />
     <Footer />
+    <ApplicationForm :show="applicForm"/>
   </div>
 </template>
 
 <script>
+import ApplicationForm from '@/forms/ApplicationForm.vue';
 import Block1 from './components/Block1.vue';
 import Block2 from './components/Block2.vue';
 import Block3 from './components/Block3.vue';
@@ -22,6 +24,7 @@ import Footer from './components/Footer.vue';
 export default {
   name: 'App',
   components: {
+    ApplicationForm,
     Block1,
     Block2,
     Block3,
@@ -29,6 +32,16 @@ export default {
     Block5,
     Block6,
     Footer
+  },
+  data() {
+    return {
+      applicForm: false
+    };
+  },
+  methods: {
+    showApplic() {
+      this.applicForm = !this.applicForm;
+    }
   }
 };
 </script>
@@ -78,14 +91,21 @@ export default {
     background: rgb(240, 240, 240);
   }
 
-  /* .dark-block:before {
-    content: '';
-    height: 2px;
-    width: 90%;
-    border-radius: 5px;
-    background: lightgray;
-    margin-bottom: 100px;
-  } */
+  .carousel-caption {
+    width: 100%;
+    height: 85px !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    background: rgba(0, 0, 0, 0.3);
+    padding-top: 10px !important;
+    text-shadow: 1px 1px 2px #333;
+  }
+
+  .btn {
+    min-height: 30px;
+    min-width: 120px;
+  }
 
   @media (max-width: 767px) {
     .col-md-3, .col-md-9 {

@@ -21,7 +21,7 @@
               <div class="add">срок разработки - неделя</div>
             </div>
           </b-card-body>
-          <b-button href="#" variant="primary">Оставить заявку</b-button>
+          <b-button variant="primary" @click="$parent.showApplic()">Оставить заявку</b-button>
         </b-card>
         <b-card>
           <b-card-header>
@@ -41,7 +41,7 @@
               <div class="add">срок разработки - неделя</div>
             </div>
           </b-card-body>
-          <b-button href="#" variant="primary">Оставить заявку</b-button>
+          <b-button variant="primary" @click="$parent.showApplic()">Оставить заявку</b-button>
         </b-card>
       </div>
     </b-container>
