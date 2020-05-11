@@ -95,10 +95,14 @@ export default {
     },
     send() {
       this.loading = true;
-      const data = { name: this.name, phone: this.phone, email: this.email };
+      const data = {
+        recipient: 'olevkino@gmail.com',
+        title: 'Форма обратной связи',
+        message: `Имя: ${this.name}\r\n\r\nТелефон: ${this.phone}\r\n\r\nEmail: ${this.email}`
+      };
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://formspree.io/mlepeqwl');
-      xhr.setRequestHeader('Accept', 'application/json');
+      xhr.open('POST', 'https://onpix.ru/back/mail/');
+      xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.onreadystatechange = () => {
         this.loading = false;
         if (xhr.readyState !== XMLHttpRequest.DONE) {
@@ -107,6 +111,8 @@ export default {
         if (xhr.status === 200) {
           this.$bvModal.hide('application-modal');
           this.result = 'Заявка успешно подана. Я свяжусь с Вами в ближайшее время. Спасибо.';
+          // eslint-disable-next-line no-undef
+          ym(62680837, 'reachGoal', 'applicSend');
         } else {
           this.result = `Ошибка отправки${xhr.response}`;
         }

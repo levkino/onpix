@@ -1,5 +1,6 @@
 <template>
   <div id="about" class="dark-block">
+    <a href="#about"/>
     <b-container>
       <h1>Обо мне</h1>
       <div class="about wow fadeInUp">

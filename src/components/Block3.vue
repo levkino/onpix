@@ -1,5 +1,6 @@
 <template>
   <div id="prices" class="dark-block">
+    <a href="#prices"/>
     <b-container>
       <h1>Цены</h1>
       <div class="price wow fadeInUp">

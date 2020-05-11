@@ -1,5 +1,6 @@
 <template>
   <div id="question" class="light-block">
+    <a href="#question"/>
     <b-container>
       <h1>Задать вопрос</h1>
       <div class="question wow fadeInUp">

@@ -1,5 +1,6 @@
 <template>
   <div id="advatages" class="light-block">
+    <a href="#advatages"/>
     <b-container>
       <h1>Почему я?</h1>
       <div class="advantages" align="center">

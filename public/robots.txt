@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap:  http://www.onpix.ru/sitemap.xml
+Host: www.onpix.ru
