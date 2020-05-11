@@ -24,11 +24,6 @@
 </template>
 
 <style scoped>
-  .dark-block {
-    background: url(../assets/back1.jpg) no-repeat;
-    background-size: cover;
-  }
-
   .navbar {
     flex-direction: column;
     display: flex;
@@ -55,7 +50,18 @@
     margin: 20px 0;
   }
 
+  @media (min-width: 800px) {
+    .dark-block {
+      background: url(../assets/back1.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+
   @media (max-width: 767px) {
+    .dark-block {
+      background: url(../assets/back1_mobile.jpg) no-repeat;
+      background-size: cover;
+    }
     .navbar {
       justify-content: space-around;
       line-height: 1.0rem;

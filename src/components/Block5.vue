@@ -11,8 +11,16 @@
         </p>
         <h3 class="mt-5 mb-4">Примеры моих работ</h3>
         <b-carousel controls indicators :interval="4000" img-width="1024" img-height="529">
-          <b-carousel-slide caption="www.dance-soft.ru" img-src="@/assets/slide5_2.jpg"/>
-          <b-carousel-slide caption="www.fitness-soft.ru" img-src="@/assets/slide5_3.jpg"/>
+          <b-carousel-slide caption="www.dance-soft.ru">
+            <template v-slot:img>
+              <b-img-lazy class="d-block img-fluid w-100" src="@/assets/slide5_2.jpg"/>
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide caption="www.fitness-soft.ru">
+            <template v-slot:img>
+              <b-img-lazy class="d-block img-fluid w-100" src="@/assets/slide5_3.jpg"/>
+            </template>
+          </b-carousel-slide>
         </b-carousel>
         <p class="mt-5">
           Оставьте заявку и я свяжусь с Вами в ближайшее время.

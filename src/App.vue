@@ -49,7 +49,10 @@ export default {
 <style>
   @font-face {
     font-family: 'Roboto';
-    src: url(./assets/roboto.ttf);
+    font-style: normal;
+    font-weight: 400;
+    src: url(./assets/roboto.woff2);
+    font-display: swap;
   }
 
   #app {
