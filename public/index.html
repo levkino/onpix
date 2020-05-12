@@ -18,19 +18,6 @@
     <!-- built files will be auto injected -->
 
     <!-- Отложенная инициализация аналитики -->
-    <script>
-      var firstScroll = true;
-      var loadJS = function(url, implementationCode, location){
-        var script = document.createElement("script");
-        script.src = url;
-        document.head.appendChild(script);
-      };
-      document.addEventListener('scroll', function() {
-        if (!firstScroll || window.location.href.includes('localhost'))
-          return;
-        firstScroll = false;
-        loadJS('js/analytics.js');
-      });
-    </script>
+    <script src="js/analytics.js" async></script>
   </body>
 </html>

@@ -96,7 +96,7 @@ export default {
     send() {
       this.loading = true;
       const data = {
-        recipient: 'olevkino@gmail.com',
+        recipient: 'levkino@yandex.ru',
         title: 'Форма обратной связи',
         message: `Имя: ${this.name}\r\n\r\nТелефон: ${this.phone}\r\n\r\nEmail: ${this.email}`
       };

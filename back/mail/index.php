@@ -12,7 +12,7 @@ function sendMail($data) {
     echo 'Проверьте правильность переданных параметров.';
     return;
   }
-  $from = 'info@onpix.ru';
+  $from = 'mail@onpix.ru';
   $to = $data['recipient'];
   $title = $data['title'];
   $message = $data['message'];

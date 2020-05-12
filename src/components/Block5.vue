@@ -9,16 +9,26 @@
           Меня зовут Лев. Я закончил кафедру инженерной кибернетики в НИТУ МИСиС.
           Занимюсь разработкой десктопных приложений и веб-сайтов более 10 лет.
         </p>
-        <h3 class="mt-5 mb-4">Примеры моих работ</h3>
+        <h3 class="mt-5 mb-4">Примеры лендингов</h3>
         <b-carousel controls indicators :interval="4000" img-width="1024" img-height="529">
-          <b-carousel-slide caption="www.dance-soft.ru">
+          <b-carousel-slide>
             <template v-slot:img>
               <b-img-lazy class="d-block img-fluid w-100" src="@/assets/slide5_2.jpg"/>
             </template>
           </b-carousel-slide>
-          <b-carousel-slide caption="www.fitness-soft.ru">
+          <b-carousel-slide>
             <template v-slot:img>
               <b-img-lazy class="d-block img-fluid w-100" src="@/assets/slide5_3.jpg"/>
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide>
+            <template v-slot:img>
+              <b-img-lazy class="d-block img-fluid w-100" src="@/assets/slide5_4.jpg"/>
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide>
+            <template v-slot:img>
+              <b-img-lazy class="d-block img-fluid w-100" src="@/assets/slide5_5.jpg"/>
             </template>
           </b-carousel-slide>
         </b-carousel>
