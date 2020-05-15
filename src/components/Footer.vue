@@ -13,7 +13,7 @@
         </span>
         <span>
           <font-awesome-icon class="mr-2" icon="envelope" title="Почта"/>
-          levkino@yandex.ru
+          info@onpix.ru
         </span>
       </div>
       <div class="copyright">

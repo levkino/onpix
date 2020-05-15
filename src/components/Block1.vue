@@ -13,7 +13,7 @@
         </span>
         <span>
           <font-awesome-icon class="mr-2" icon="envelope" title="Почта"/>
-          levkino@yandex.ru
+          info@onpix.ru
         </span>
       </div>
     </div>
@@ -25,7 +25,7 @@
       <div class="bottom" align="right"></div>
     </div>
     <div class="sub-header">
-      <p class="wow fadeInUp delay-1s">на заказ</p>
+      <p class="wow fadeInUp delay-1s">под ключ</p>
     </div>
     <div id="arrow-down" class="arrow-down wow fadeInUp delay-1s">
       <div class="wow pulse infinite">

@@ -1,11 +1,11 @@
 <template>
   <div>
     <b-modal id="application-modal" hide-footer title="Заявка на сайт" size="sm">
-      <div class="form text-center">
+      <div class="form text-center" v-focus-first v-focusNextOnEnter>
         <b-form-group label="Имя и фамилия:"
                       :invalid-feedback="nameInvalidText"
                       :state="nameState">
-          <b-form-input v-model.trim="name" :state="nameState" placeholder="Имя и фамилия"/>
+          <b-form-input v-model.trim="name" :state="nameState" placeholder="Имя и фамилия" autofocus/>
         </b-form-group>
         <b-form-group label="Телефон:"
                       :invalid-feedback="phoneInvalidText"
@@ -58,13 +58,13 @@ export default {
   },
   computed: {
     nameState() {
-      return this.name === null ? null : this.name.length >= 5;
+      return this.name === null ? null : this.name.length >= 3;
     },
     nameInvalidText() {
       return this.state ? null : 'Укажите имя и фамилию';
     },
     phoneState() {
-      return this.phone === null ? null : this.phone >= 9999999999;
+      return this.phone === null ? null : this.phone >= 999999999;
     },
     phoneInvalidText() {
       return this.state ? null : 'Укажите телефон';
@@ -98,7 +98,11 @@ export default {
       const data = {
         recipient: 'levkino@yandex.ru',
         title: 'Форма обратной связи',
-        message: `Имя: ${this.name}\r\n\r\nТелефон: ${this.phone}\r\n\r\nEmail: ${this.email}`
+        fields: {
+          Имя: this.name,
+          Телефон: this.phone,
+          Email: this.email
+        }
       };
       const xhr = new XMLHttpRequest();
       xhr.open('POST', 'https://onpix.ru/back/mail/');
