@@ -17,7 +17,7 @@
         </span>
       </div>
       <div class="copyright">
-        Copyright © Ованоглян Л.О.  2020
+        <a class="text-white" href="https://vk.com/levkino" target="_blank">Copyright © Ованоглян Л.О.</a>
       </div>
     </div>
   </div>
