@@ -5,7 +5,16 @@ document.addEventListener('scroll', () => {
   firstScroll = false;
   loadYandexMetrika();
   loadGoogleAnalytics();
+  setTimeout(() => loadScript('//code-ya.jivosite.com/widget/y72TBunqyX'), 2000);
 });
+
+// Динамическая загрузка файла js
+function loadScript(url) {
+  const e = document.createElement('script');
+  e.src = url;
+  document.getElementsByTagName('head')[0].appendChild(e);
+}
+
 
 // Яндрекс Метрика
 function loadYandexMetrika() {
