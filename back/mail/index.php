@@ -11,6 +11,8 @@ if (empty($data['message']))
 sendMail($data);
 
 function createMessage($fields) {
+  $c = true;
+  $message = "";
   foreach ($fields as $key => $value) {
     $message .= "
     " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
